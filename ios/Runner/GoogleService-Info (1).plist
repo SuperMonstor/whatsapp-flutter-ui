@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+~\u202f<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>648993614225-90ln1nfr8rlin5rdf6b5k3f7t2liqba7.apps.googleusercontent.com</string>
+	<string>949901478411-6vpe47ed26ka7hahorrel88ihn77i3oc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.648993614225-90ln1nfr8rlin5rdf6b5k3f7t2liqba7</string>
+	<string>com.googleusercontent.apps.949901478411-6vpe47ed26ka7hahorrel88ihn77i3oc</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCj83nAk4xn5iK0w49-SA4dQghy8FTzt84</string>
+	<string>AIzaSyCqYBSsNM4LAwezyLPaSFBjwWAaM5W2fMI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>648993614225</string>
+	<string>949901478411</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.whatsappUi</string>
+	<string>com.example.udemyShit</string>
 	<key>PROJECT_ID</key>
-	<string>whatsapp-c-8be6a</string>
+	<string>sandbox-9f02d</string>
 	<key>STORAGE_BUCKET</key>
-	<string>whatsapp-c-8be6a.appspot.com</string>
+	<string>sandbox-9f02d.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:648993614225:ios:aad32213adee1e9b46d230</string>
+	<string>1:949901478411:ios:0475740a42ee6ddafa550e</string>
 </dict>
 </plist>
