@@ -2,24 +2,27 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:whatsapp_ui/common/utils/utils.dart';
+import 'package:whatsapp_ui/features/auth/controller/auth_controller.dart';
 
-class UserInformationScreen extends StatefulWidget {
+class UserInformationScreen extends ConsumerStatefulWidget {
   static const String routeName = '/user-information-screen';
   UserInformationScreen({Key? key}) : super(key: key);
 
   @override
-  State<UserInformationScreen> createState() => _UserInformationScreenState();
+  ConsumerState<UserInformationScreen> createState() =>
+      _UserInformationScreenState();
 }
 
-class _UserInformationScreenState extends State<UserInformationScreen> {
-  final TextEditingController messageController = TextEditingController();
+class _UserInformationScreenState extends ConsumerState<UserInformationScreen> {
+  final TextEditingController nameController = TextEditingController();
   File? _image;
 
   @override
   void dispose() {
     super.dispose();
-    messageController.dispose();
+    nameController.dispose();
   }
 
   void selectImage() async {
@@ -27,6 +30,16 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
     setState(() {
       _image = image;
     });
+  }
+
+  void storeUserData() async {
+    String name = nameController.text.trim();
+
+    if (name.isNotEmpty) {
+      ref
+          .read(authControllerProvider)
+          .storeDataToFirebase(context, name, _image);
+    }
   }
 
   @override
@@ -64,13 +77,13 @@ class _UserInformationScreenState extends State<UserInformationScreen> {
                 width: size.width * 0.85,
                 padding: const EdgeInsets.all(20),
                 child: TextField(
-                  controller: messageController,
+                  controller: nameController,
                   decoration: const InputDecoration(
                     hintText: 'Enter your name',
                   ),
                 ),
               ),
-              IconButton(onPressed: () {}, icon: const Icon(Icons.done))
+              IconButton(onPressed: storeUserData, icon: const Icon(Icons.done))
             ],
           )
         ],
