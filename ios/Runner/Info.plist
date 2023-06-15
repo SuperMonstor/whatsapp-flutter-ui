@@ -61,5 +61,7 @@
 
 	<key>NSCameraUsageDescription</key>
 		<string>don't be gay</string>
+	<key>NSContactsUsageDescription</key>
+    <string>Reason we need access to the contact list</string>
 </dict>
 </plist>
